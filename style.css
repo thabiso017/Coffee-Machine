@@ -1,0 +1,378 @@
+.heading h1{
+  color: maroon;
+  text-align: center;
+  font-size: 70px;
+  font-style: italic;
+}
+
+.container{
+  width: 300px;
+  height: 280px;
+  position: absolute;
+  top: calc(50% - 140px);
+  left: calc(50% - 150px);
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+/* Coffee machine top section */
+
+.top{
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.coffee-machine_buttons{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.coffee-machine_buttons::after{
+  content: "";
+  width: 6px;
+  height: 7px;
+  position: absolute;
+  background-color: maroon;
+  top: 20px;
+  left: calc(50% - 3px);
+}
+
+.button-one{
+  left: 10px;
+}
+
+.button-two{
+  left: 35px;
+}
+
+@keyframes display{
+  0%{
+    background-color: indianred;    
+  }
+  100%{
+    background-color: maroon;
+  }
+}
+
+.coffee-machine_display{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  background-color: indianred ;
+  border: 5px solid darkred;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: display 3s infinite;
+}
+
+.coffee-machine_vents{
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+  background-color: grey;
+}
+
+.coffee-machine_vents::before{
+  content: "";
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  background-color: grey;
+}
+
+.coffee-machine_vents::after{
+  content: "";
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  right: 30px;
+  background-color: grey;
+}
+
+
+/* Coffee machine middle section */
+
+.middle{
+  width: 90%;
+  height: 140px;
+  position: absolute;
+  background-color: darkgray;
+  top: 70px;
+  left: calc(50% - 45%);
+}
+
+.middle::before{
+  content: "";
+  width: 90%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 45%);
+  background-color: gray;
+  border-radius: 20px 20px 0 0;
+}
+
+.coffee-machine_filter{
+  width: 70px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 35px);
+  background-color: black;
+}
+
+.coffee-machine_filter::before{
+  content: "";
+  width: 80%;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 40%);
+  background-color: black;
+  border-radius: 0 0 50% 50%;
+}
+
+.coffee-machine_filter::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 5px);
+  background-color: black;
+}
+
+.coffee-machine_filter-handle{
+  width: 70px;
+  height: 15px;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background-color:darkred;
+  border-radius: 10px 20px 20px 10px;
+}
+
+.coffee-machine_filter-handle::after{
+  content: "";
+  width: 17px;
+  height: 5px;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  right: 70px;
+  background-color: white;
+}
+
+.coffee-machine_cup{
+  width: 70px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 35px);
+  background-color: white;
+  border-radius: 0 0 70px 70px;
+}
+
+.coffee-machine_cup::after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 6px;
+  right: -12px;
+  border: 5px solid white;
+  border-radius: 0 20px 25px 25px;
+}
+
+@keyframes pouring{
+  0%{
+    height: 0px;
+    opacity: 0;
+  }
+  1%{
+    height: 0px;
+    opacity: 0;
+  }
+  25%{
+    height: 50px;
+    opacity: 1;
+  }
+  75%{
+    height: 50px;
+    opacity: 1;
+  }
+  100%{
+    height: 50px;
+    opacity: 0;
+  }
+}
+
+.coffee-machine_liquid{
+  width: 6px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+  top: 50px;
+  left: calc(50% - 3px);
+  background-color: brown;
+  border-radius: 0 0 5px 5px;
+  animation: pouring 3s linear infinite;
+}
+
+.coffee-machine_steam{
+  width: 7px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+  bottom: 40px;
+  background-color: gainsboro;
+  border-radius: 25px;
+}
+
+@keyframes steam-one{
+  0%{
+    bottom: 40px;
+    opacity: 0;
+  }
+  25%{
+    bottom: 64px;
+    opacity: 1;
+  }
+  75%{
+    bottom: 64px;
+    opacity: 1;
+  }
+  100%{
+    bottom: 64px;
+    opacity: 0;
+  }
+}
+
+@keyframes steam-two{
+  0%{
+    bottom: 45px;
+    opacity: 0;
+  }
+  25%{
+    bottom: 64px;
+    opacity: 1;
+  }
+  75%{
+    bottom: 64px;
+    opacity: 1;
+  }
+  100%{
+    bottom: 64px;
+    opacity: 0;
+  }
+}
+
+.steam-one{
+  left: calc(50% - 15px);
+  animation: steam-one 3s 1s linear infinite;
+
+}
+
+.steam-two{
+  left: calc(50% - 30px);
+  animation: steam-two 3s 1.5s linear infinite;
+}
+
+.steam-three{
+  right: calc(50% - 15px);
+  animation: steam-one 2s 1.5s linear infinite;
+}
+
+.steam-four{
+  right: calc(50% - 26px);
+  animation: steam-two 2s 1s linear infinite;
+}
+
+
+/* Coffee-machine bottom section */
+
+.bottom{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  border-radius: 5px 5px 0 0;
+}
+
+.drip-tray{
+  width: 95%;
+  height: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 47.5%);
+  background-color: darkred;
+  border-radius: 25px;
+}
+
+.machine-legs{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  background-color: black;
+}
+
+.machine-legs::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 240px;
+  background-color: black;
+}
+
+.bottom h3{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.table{
+  width: 700px;
+  height: 30px;
+  position: absolute;
+  margin: 330px 0 0 320px;
+  background-color: burlywood;
+  border-radius: 25px 25px 0 0;
+}
+
+.table::before{
+  content: "";
+  width: 20px;
+  height: 160px;
+  position: absolute;
+  bottom: -160px;
+  left: 150px;
+  background-color: gray;
+}
+
+.table::after{
+  content: "";
+  width: 20px;
+  height: 160px;
+  position: absolute;
+  bottom: -160px;
+  right: 150px;
+  background-color: gray;
+}
